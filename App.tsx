@@ -1,15 +1,21 @@
 import React from 'react';
-import { View, Text } from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack'
 
 import type {Routes} from './src/Routes'
-import {Examples} from './src/Examples'
+import { Examples } from './src/Examples'
+import { LoadAssets } from './src/components';
 
-function App() {
+const Stack = createStackNavigator<Routes>();
+
+const App = () => {
   return (
-    <View>
-      <Text>Hello Joke!</Text>
-    </View>
+    <LoadAssets assets={[]}>
+      <Stack.Navigator>
+        <Stack.Screen name="Examples" component={Examples} options={{
+          title: 'Learn Reanimated',
+        }} />
+      </Stack.Navigator>
+    </LoadAssets>
   );
 }
 

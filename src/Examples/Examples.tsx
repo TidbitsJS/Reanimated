@@ -5,7 +5,7 @@ import { useNavigation } from '@react-navigation/native';
 import { RectButton } from 'react-native-gesture-handler';
 
 import type { Routes } from '../Routes';
-import { StyleGuide } from '../components/StyleGuide';
+import { StyleGuide } from '../components';
 
 export const examples = [
     {
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
 })
 
 export const Examples = () => {
-    const {navigate} = useNavigation<StackNavigationProp<Routes, "Examples">>();
+    const { navigate } = useNavigation<StackNavigationProp<Routes, "Examples">>();
     return (
         <ScrollView style={styles.container} contentContainerStyle={styles.content}>
             {examples.map((thumbnail) => (
