@@ -40,9 +40,10 @@ export const Worklets = () => {
 
   return (
     <View style={styles.container}>
-      <Text>Js thread says:</Text>
+      <Text style={{fontWeight: 'bold'}}>Js thread says:</Text>
       <Text>{jsText}</Text>
-      <Text>UI thread says:</Text>
+
+      <Text style={{fontWeight: 'bold', marginTop: 10}}>UI thread says:</Text>
       <ReText {...{ text }} />
       <Button
         onPress={() => 

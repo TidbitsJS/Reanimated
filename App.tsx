@@ -1,10 +1,11 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack'
 
-import type {Routes} from './src/Routes'
+import type { Routes } from './src/Routes'
 import { Examples } from './src/Examples'
 import { LoadAssets } from './src/components';
 import { VanillaHeart } from './src/HeartOfTheMatter';
+import { Worklets } from './src/Worklets';
 
 const Stack = createStackNavigator<Routes>();
 
@@ -26,6 +27,13 @@ const App = () => {
             title: 'The Heart of the Matter',
           }}
         />
+        <Stack.Screen
+        name="Worklets"
+        component={Worklets}
+        options={{
+          title: "Worklets",
+        }}
+      />
       </Stack.Navigator>
     </LoadAssets>
   );
