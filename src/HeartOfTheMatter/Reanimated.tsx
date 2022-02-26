@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
 export const Reanimated = () => {
   const x = useSharedValue(0);
   const y = useSharedValue(0);
-  
+
   const onGestureEvent = useAnimatedGestureHandler<
     PanGestureHandlerGestureEvent,
     { x: number; y: number }
@@ -40,7 +40,7 @@ export const Reanimated = () => {
       y.value = ctx.y + translationY;
     },
   });
-  
+
   const style = useAnimatedStyle(() => ({
     transform: [{ translateX: x.value }, { translateY: y.value }],
   }));
