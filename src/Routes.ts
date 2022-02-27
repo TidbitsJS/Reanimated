@@ -3,4 +3,5 @@ export type Routes = {
   TheHeartOfTheMatter: undefined;
   Worklets: undefined;
   Transitions: undefined;
+  PanGesture: undefined;
 };

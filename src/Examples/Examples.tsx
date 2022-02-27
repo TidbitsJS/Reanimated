@@ -20,6 +20,10 @@ export const examples = [
     screen: "Transitions",
     title: "🔁 Transitions",
   },
+  {
+    screen: "PanGesture",
+    title: "💳 PanGesture",
+  },
 ] as const;
 
 const styles = StyleSheet.create({
