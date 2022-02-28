@@ -2,7 +2,7 @@ import { StyleSheet, Dimensions } from "react-native";
 import Animated, { useAnimatedStyle } from "react-native-reanimated";
 import { mix } from "react-native-redash";
 
-import type { Cards } from "../components/Card";
+import type { Cards } from "../components";
 import { Card, StyleGuide } from "../components";
 
 const { width } = Dimensions.get("window");
@@ -28,12 +28,13 @@ export const AnimatedCard = ({
   index,
 }: AnimatedCardProps) => {
   const style = useAnimatedStyle(() => {
-    const rotate = (index - 1) * mix(transition.value, 0, Math.PI / 6);
+    const rotate = (index - 1) * mix(transition.value, 0, Math.PI / 12);
+
     return {
       transform: [
         { translateX: origin },
         { rotate: `${rotate}rad` },
-        { translateY: -origin },
+        { translateX: -origin },
       ],
     };
   });

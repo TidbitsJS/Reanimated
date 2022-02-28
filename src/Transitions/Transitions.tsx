@@ -16,9 +16,10 @@ const styles = StyleSheet.create({
 export const Transitions = () => {
   const [toggled, setToggle] = useState(false);
   const transition = useSpring(toggled);
+
   return (
     <View style={styles.container}>
-      {cards.slice(0, 3).map((card, index) => (
+      {cards.slice(0, 5).map((card, index) => (
         <AnimatedCard key={card} {...{ index, card, transition }} />
       ))}
       <Button
