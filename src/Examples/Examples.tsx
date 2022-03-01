@@ -24,6 +24,10 @@ export const examples = [
     screen: "PanGesture",
     title: "💳 PanGesture",
   },
+  {
+    screen: "Animations",
+    title: "🐎 Animations",
+  },
 ] as const;
 
 const styles = StyleSheet.create({
