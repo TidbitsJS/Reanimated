@@ -8,6 +8,7 @@ import { VanillaHeart } from "./src/HeartOfTheMatter";
 import { Worklets } from "./src/Worklets";
 import { Transitions } from "./src/Transitions";
 import { PanGesture } from "./src/PanGesture";
+import { Animations } from "./src/Animations";
 
 const Stack = createStackNavigator<Routes>();
 
@@ -34,6 +35,13 @@ const App = () => {
           component={Worklets}
           options={{
             title: "Worklets",
+          }}
+        />
+        <Stack.Screen
+          name="Animations"
+          component={Animations}
+          options={{
+            title: "Animations",
           }}
         />
         <Stack.Screen
