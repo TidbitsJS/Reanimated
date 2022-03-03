@@ -28,6 +28,10 @@ export const examples = [
     screen: "Animations",
     title: "🐎 Animations",
   },
+  {
+    screen: "CircularSlider",
+    title: "⭕️ Circular Slider",
+  },
 ] as const;
 
 const styles = StyleSheet.create({
