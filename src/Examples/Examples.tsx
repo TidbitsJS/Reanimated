@@ -32,6 +32,10 @@ export const examples = [
     screen: "CircularSlider",
     title: "⭕️ Circular Slider",
   },
+  {
+    screen: "Graph",
+    title: "📈 Graph Interactions",
+  },
 ] as const;
 
 const styles = StyleSheet.create({

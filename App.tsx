@@ -9,6 +9,7 @@ import { Worklets } from "./src/Worklets";
 import { Transitions } from "./src/Transitions";
 import { PanGesture } from "./src/PanGesture";
 import { Animations } from "./src/Animations";
+import { CircularSlider } from "./src/CircularSlider";
 
 const Stack = createStackNavigator<Routes>();
 
@@ -56,6 +57,13 @@ const App = () => {
           component={Transitions}
           options={{
             title: "Transitions",
+          }}
+        />
+        <Stack.Screen
+          name="CircularSlider"
+          component={CircularSlider}
+          options={{
+            title: "Circular Slider",
           }}
         />
       </Stack.Navigator>
